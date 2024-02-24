@@ -2,7 +2,7 @@ function encriptar() {
     let texto = document.getElementById("texto").value;
     let tituloMensaje = document.getElementById("titulo-mensaje");
     let parrafo = document.getElementById("parrafo");
-    let muñeco = document.getElementById("muñeco");
+    let sherlock = document.getElementById("sherlock");
   
     let textoCifrado = texto
       .replace(/e/gi, "enter")
@@ -15,11 +15,11 @@ function encriptar() {
       document.getElementById("texto").value = textoCifrado;
       tituloMensaje.textContent = "Texto encriptado con éxito";
       parrafo.textContent = "";
-      muñeco.src = "./img/encriptado.jpg"
+      sherlock.src = "./img/encriptado.jpg"
     } else {
-      muñeco.src = "./img/muñeco.png";
+      sherlock.src = "./img/sherlock.png";
       tituloMensaje.textContent = "Ningún mensaje fue encontrado";
-      parrafo.textContent = "Ingresa el texto que deseas encriptar o desencriptar";
+      parrafo.textContent = "Ingresa en el area de texto lo que deseas encritar o desencriptar";
       swal("Ooops!", "ingresa un texto por favor", "warning");
     }                     
 }
@@ -28,7 +28,7 @@ function desencriptar() {
     let texto = document.getElementById("texto").value;
     let tituloMensaje = document.getElementById("titulo-mensaje");
     let parrafo = document.getElementById("parrafo");
-    let muñeco = document.getElementById("muñeco");
+    let sherlock = document.getElementById("sherlock");
   
     let textoCifrado = texto
       .replace(/enter/gi, "e")
@@ -41,11 +41,11 @@ function desencriptar() {
         document.getElementById("texto").value = textoCifrado;
         tituloMensaje.textContent = "Texto desencriptado con éxito";
         parrafo.textContent = "";
-        muñeco.src = "./img/desencriptado.jpg";
+        sherlock.src = "./img/desencriptado.jpg";
       } else {
-        muñeco.src = "./img/muñeco.png";
+        sherlock.src = "./img/sherlock.png";
         tituloMensaje.textContent = "Ningún mensaje fue encontrado";
-        parrafo.textContent = "Ingresa el texto que deseas encriptar o desencriptar";
+        parrafo.textContent = "Ingresa en el area de texto lo que deseas encritar o desencriptar";
         swal("Ooops!", "ingresa un texto por favor", "warning");
       }
 }
