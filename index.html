@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encriptador de Texto</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  </head>
+  <body>
+
+    <div class="container">
+    <img src="img/alura.jpg" alt="" class="alura" />
+      <div class="encriptar">
+  
+        <textarea
+          name="texto"
+          class="texto"
+          id="texto"
+          cols="30"
+          rows="10"
+          placeholder="Ingresa el texto aquí"
+        ></textarea>
+
+        <div class="terminos">
+          <p><I>Solo letras minúsculas y sin acentos.</I></p>
+        </div>
+       
+        <div class="botones">
+         
+          <input
+          class="btn-encriptar" 
+          type="button" 
+          onclick="encriptar()"
+          value="Encriptar">
+          
+          <input
+            type="button"
+            class="btn-desencriptar"
+            value="Desencriptar"
+            onclick="desencriptar()">
+      </div>
+      </div>
+      <div class="encriptado">
+      <img src="img/muñeco.png" alt="" id="muñeco" />
+      <div class="mensaje-encriptado" id="mensaje-encriptado">
+      <h2 id="titulo-mensaje">Ningún mensaje fue encontrado</h2>
+      <p id="parrafo">
+      <i>Ingresa en el area de texto lo que deseas encritar o desencriptar</i>
+      </p>
+      <button class="btn-copiar" onclick="myFunction()">Copiar</button>
+      </div>
+      </div>
+      </div>
+  </body>
+  <script src="index.js"></script>
+</html>
+
